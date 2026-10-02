@@ -271,12 +271,57 @@
           </div>
           <ol class="install">
             <li><b>Download</b> the file on your phone.</li>
-            <li>Open it. If Android asks, allow your browser to <b>install unknown apps</b> (a normal Android setting, not Developer Options).</li>
+            <li>Open it. If Android asks, allow your browser to <b>install unknown apps</b> (a normal Android setting, not Developer Options). Blocked by Play Protect? <a href="#help">See install help</a>.</li>
             <li>Tap <b>Install</b>, then <b>Open</b>.</li>
-            <li>When HyDeck asks for <b>Notification access</b>, switch it on so it can read what is playing.</li>
+            <li>When HyDeck asks for <b>Notification access</b>, switch it on so it can read what is playing. Access denied? <a href="#help">See install help</a>.</li>
           </ol>
         </div>
       </div>
+    </section>
+
+    <!-- ─────────────── install help ─────────────── -->
+    <section class="block" id="help">
+      <div class="head">
+        <p class="eyebrow">Install help</p>
+        <h2>Android may stop you twice. Here is why, and the fix.</h2>
+        <p class="sub">HyDeck is a new app that you install from this website, so Android is careful with it. Both screens below are normal for apps installed from a website, and both take under a minute. The pictures are simple illustrations: the words differ a little between phone brands.</p>
+      </div>
+      <div class="help-grid">
+        <article class="help-card">
+          <h3><span class="help-n">1</span> "Blocked by Play Protect" while installing</h3>
+          <p class="muted">Google Play Protect warns about apps it has not seen on many phones. It does not mean HyDeck is broken: you can check the SHA-256 fingerprint in the download box against the file you got.</p>
+          <div class="mock" role="img" aria-label="Illustration of a Play Protect screen with a Learn more link">
+            <div class="mock-title">App blocked to protect your device</div>
+            <div class="mock-line"></div><div class="mock-line short"></div>
+            <div class="mock-row"><span class="mock-btn">Learn more</span><span class="mock-btn ok">OK</span></div>
+          </div>
+          <ol class="install">
+            <li>Open the <b>Play Store</b>, tap your <b>profile picture</b>, then <b>Play Protect</b>.</li>
+            <li>Tap the <b>gear</b> (top right) and switch off <b>Scan apps with Play Protect</b>.</li>
+            <li>Download and install HyDeck again.</li>
+            <li>Switch Play Protect back <b>on</b>. HyDeck keeps working.</li>
+          </ol>
+          <p class="fine">If your phone shows <b>More details → Install anyway</b>, just use that instead.</p>
+        </article>
+
+        <article class="help-card">
+          <h3><span class="help-n">2</span> "Access denied" on notification access</h3>
+          <p class="muted">HyDeck needs notification access to read the song that is playing. Android 13 and newer lock that switch for apps installed outside the Play Store until you allow it yourself.</p>
+          <div class="mock" role="img" aria-label="Illustration of the App info screen with the three-dot menu and Allow restricted settings">
+            <div class="mock-bar"><b>App info</b><span class="mock-dots">⋮</span></div>
+            <div class="mock-menu">Allow restricted settings</div>
+            <div class="mock-line"></div>
+          </div>
+          <ol class="install">
+            <li>Press and hold the <b>HyDeck</b> icon, then tap <b>App info</b> (or Settings → Apps → HyDeck).</li>
+            <li>Tap the <b>⋮</b> menu at the top right.</li>
+            <li>Tap <b>Allow restricted settings</b> and approve it with your PIN or fingerprint.</li>
+            <li>Open HyDeck again and switch on <b>Notification access</b>.</li>
+          </ol>
+          <p class="fine">No ⋮ menu? Try to switch notification access on once first; the menu appears after Android blocks it.</p>
+        </article>
+      </div>
+      <p class="help-foot">Still stuck? <a href="https://github.com/abdulazizmerathemydin-del/hyper-tech-widget/issues/new" target="_blank" rel="noopener">Tell us your phone and what you see</a>. HyDeck never needs Developer Options, and it asks for nothing except notification access and the internet.</p>
     </section>
 
     <!-- ─────────────── faq ─────────────── -->
