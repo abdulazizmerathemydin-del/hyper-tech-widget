@@ -241,3 +241,29 @@ figcaption b { display: block; color: var(--ink); font-family: 'Share Tech Mono'
 .mock-menu { justify-self: end; background: #2c2c33; border-radius: 10px; padding: 10px 14px; box-shadow: 0 6px 18px rgba(0,0,0,.4); }
 .help-card .fine { color: var(--muted); font-size: 13px; }
 .help-foot { margin-top: 18px; color: var(--muted); text-align: center; }
+
+/* ── GYM ── */
+.block.gym { background: radial-gradient(90% 70% at 30% 0%, #1d1433, #07060d 65%); color: #e6dcff; border-block: 1px solid rgba(176,124,255,.25); }
+.eyebrow.violet { color: #b07cff; }
+.gym .sub, .gym .fine { color: #9d8bc9; }
+.gym .device { box-shadow: 0 0 0 2px #3b2a66, 0 40px 80px -24px rgba(0,0,0,.8), 0 0 90px -14px rgba(176,124,255,.4); }
+.ribbon.violet { background: #b07cff; color: #12091f; }
+.gym-grid { display: grid; grid-template-columns: auto 1fr; gap: 44px; align-items: start; }
+.gym-info h3 { font-size: 22px; margin: 0 0 10px; color: #e6dcff; }
+.bullets.violet li { color: #cfc2f0; }
+.bullets.violet li::before { color: #b07cff; }
+.bullets.violet b { color: #f1eaff; }
+.gym .step { border-color: rgba(176,124,255,.3); }
+.gym .step > b { background: #b07cff; color: #12091f; }
+.gym .step p, .gym .step em { color: #cfc2f0; }
+.gym-shots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 40px; }
+.gym-shots figure { display: grid; gap: 8px; justify-items: center; text-align: center; }
+.gym-shots img { width: 100%; border-radius: 16px; border: 1px solid rgba(176,124,255,.35); box-shadow: 0 20px 50px -20px rgba(0,0,0,.8); }
+.gym-shots figcaption { font-size: 13px; color: #9d8bc9; }
+.fine.center { text-align: center; margin-top: 24px; }
+.card.look.locked.gym-card { border-color: rgba(176,124,255,.5); }
+@media (max-width: 960px) {
+  .gym-grid { grid-template-columns: 1fr; justify-items: center; }
+  .gym-shots { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) { .gym-shots { grid-template-columns: 1fr 1fr; gap: 10px; } }

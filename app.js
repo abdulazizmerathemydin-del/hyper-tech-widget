@@ -80,7 +80,7 @@
   });
 
   // videos further down only play while they are on screen
-  const lazyVideos = $$('#volVideo, #midasVideo');
+  const lazyVideos = $$('#volVideo, #midasVideo, #gymVideo');
   if ('IntersectionObserver' in window) {
     const vio = new IntersectionObserver(es => es.forEach(en => {
       const v = en.target;
