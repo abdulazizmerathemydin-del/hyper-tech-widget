@@ -7,7 +7,11 @@
 
   // the looks that ship free, and the paid pack (locked)
   const FREE = ['cyan', 'red', 'hifi'];
-  const NAMES = { cyan: 'CYAN LCD', red: 'RED MIXER', hifi: 'HI-FI', midas: 'MIDAS' };
+  const NAMES = { cyan: 'CYAN LCD', red: 'RED MIXER', hifi: 'HI-FI', midas: 'MIDAS', gym: 'GYM' };
+  const PACKS = {
+    midas: { img: 'media/midas.png', gold: true, link: '#midas', label: 'How MIDAS works' },
+    gym: { img: 'media/gym-applause.png', gold: false, link: '#gym', label: 'How GYM works' },
+  };
   const state = { look: 'cyan', roulette: false, paused: false };
 
   const hero = $('#heroVideo');
@@ -29,10 +33,17 @@
       b.classList.toggle('on', on);
       b.setAttribute('aria-pressed', String(on));
     });
-    if (id === 'midas') {
+    if (id === 'midas' || id === 'gym') {
+      const pack = PACKS[id];
+      lockCard.dataset.pack = id;
+      $('img', lockCard).src = pack.img;
+      $('strong', lockCard).textContent = NAMES[id];
+      const more = $('a', lockCard);
+      more.href = pack.link;
+      more.textContent = pack.label;
       lockCard.hidden = false;
       hero.pause();
-      if (!quiet) hint.textContent = 'MIDAS is a paid theme pack: it is locked until you enter a code.';
+      if (!quiet) hint.textContent = `${NAMES[id]} is a paid theme pack: it is locked until you enter a code.`;
       return;
     }
     lockCard.hidden = true;

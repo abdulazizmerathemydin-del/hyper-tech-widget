@@ -267,3 +267,12 @@ figcaption b { display: block; color: var(--ink); font-family: 'Share Tech Mono'
   .gym-shots { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 560px) { .gym-shots { grid-template-columns: 1fr 1fr; gap: 10px; } }
+.pick.violet { letter-spacing: .1em; border-color: rgba(176,124,255,.55); }
+.pick.violet.on { background: #b07cff; color: #12091f; border-color: #b07cff; }
+.lockcard[data-pack="gym"] { background: #07060d; }
+.lockcard[data-pack="gym"] .lock-in { color: #e6dcff; }
+.lockcard[data-pack="gym"] .lock-in p { color: #cfc2f0; }
+.lockcard[data-pack="gym"] .lock-in .paid { border-color: #b07cff; color: #b07cff; }
+.lockcard[data-pack="gym"] svg rect { fill: #b07cff; }
+.lockcard[data-pack="gym"] svg path { stroke: #b07cff; }
+.lockcard[data-pack="gym"] .gold-btn { background: #b07cff; color: #12091f; box-shadow: 0 10px 28px -8px rgba(176,124,255,.6); }
