@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hyper Tech Widget — HyDeck</title>
+  <meta name="description" content="HyDeck is the now-playing deck for Android that dresses itself. Real recordings from the real app: every song gets a new look, it fits every phone and follows your volume buttons. Made by Hyper Tech Widget.">
+  <meta name="theme-color" content="#031319">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@600;800&family=Playfair+Display:ital,wght@0,700;1,600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23031319'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%232EE6F5' stroke-width='5'/%3E%3Cpath d='M26 22l16 10-16 10z' fill='%232EE6F5'/%3E%3C/svg%3E">
+</head>
+<body data-theme="cyan">
+  <a class="skip" href="#main">Skip to the content</a>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" id="top">
+    <a class="brand" href="#top" aria-label="Hyper Tech Widget, back to the top">
+      <svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><rect width="64" height="64" rx="14" fill="var(--accent)"/><circle cx="32" cy="32" r="17" fill="none" stroke="var(--bg)" stroke-width="5"/><path d="M26 22l16 10-16 10z" fill="var(--bg)"/></svg>
+      <span><b>Hyper Tech</b> Widget</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#try">The app</a>
+      <a href="#looks">Looks</a>
+      <a href="#fit">Fits every phone</a>
+      <a href="#midas">MIDAS pack</a>
+      <a href="#safe">Safe</a>
+      <a class="cta small" href="#download">Download</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ─────────────── hero ─────────────── -->
+    <section class="hero" id="try">
+      <div class="hero-copy">
+        <p class="eyebrow">HyDeck · an Android app</p>
+        <h1>Your music,<br>wearing a <span class="swap" id="swapWord">new look</span><br>every song.</h1>
+        <p class="lead">HyDeck is the now-playing deck that dresses itself. It watches what you play on Spotify, YouTube, TikTok and more, then puts it on a gorgeous deck that fits your phone and follows your volume buttons.</p>
+        <div class="hero-actions">
+          <a class="cta" href="#download">Get HyDeck <span aria-hidden="true">↓</span></a>
+          <a class="ghost" href="#looks">See the looks</a>
+        </div>
+        <ul class="ticks">
+          <li>Free to use</li>
+          <li>No Developer Options</li>
+          <li>Your data stays on your phone</li>
+        </ul>
+        <p class="real-note"><b>Everything you see here is real.</b> These are recordings and screenshots of the actual app on a real Android phone. The song and its artwork are made up.</p>
+      </div>
+
+      <div class="stage">
+        <div class="device" id="phone">
+          <div class="glass">
+            <video id="heroVideo" src="media/cyan.mp4" poster="media/cyan.png" muted loop playsinline autoplay preload="auto" aria-label="Recording of the HyDeck app showing the Cyan LCD look"></video>
+            <div class="lockcard" id="lockCard" hidden>
+              <img src="media/midas.png" alt="" aria-hidden="true">
+              <div class="lock-in">
+                <svg viewBox="0 0 48 48" width="56" height="56" aria-hidden="true"><rect x="9" y="21" width="30" height="21" rx="5" fill="#d4af37"/><path d="M15 21v-6a9 9 0 0 1 18 0v6" fill="none" stroke="#d4af37" stroke-width="4"/><circle cx="24" cy="31" r="3" fill="#1a1204"/></svg>
+                <strong>MIDAS</strong>
+                <span class="paid">PAID THEME PACK</span>
+                <p>This look is locked. It opens with a code made for your phone.</p>
+                <a class="gold-btn" href="#midas">How MIDAS works</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chips" role="group" aria-label="Pick a look">
+          <button class="pick on" data-look="cyan" type="button" aria-pressed="true">Cyan LCD</button>
+          <button class="pick" data-look="red" type="button" aria-pressed="false">Red Mixer</button>
+          <button class="pick" data-look="hifi" type="button" aria-pressed="false">Hi-Fi</button>
+          <button class="pick gold" data-look="midas" type="button" aria-pressed="false"><span aria-hidden="true">🔒</span> MIDAS</button>
+        </div>
+        <div class="stage-tools">
+          <label class="roulette-toggle"><input type="checkbox" id="roulette"> <span>🎲 Roulette: change look automatically</span></label>
+          <button class="ghost small" id="pauseAll" type="button" aria-pressed="false">⏸ Pause videos</button>
+        </div>
+        <p class="hint" id="hint" aria-live="polite">Tap a look to see the app wear it.</p>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="track">
+        <span>FITS EVERY PHONE</span><span>◆</span><span>ROULETTE</span><span>◆</span><span>MATCH THE VIBE</span><span>◆</span><span>VOLUME SYNC</span><span>◆</span><span>THEME PACKS</span><span>◆</span><span>NO DEVELOPER OPTIONS</span><span>◆</span><span>SPOTIFY · YOUTUBE · TIKTOK</span><span>◆</span>
+        <span>FITS EVERY PHONE</span><span>◆</span><span>ROULETTE</span><span>◆</span><span>MATCH THE VIBE</span><span>◆</span><span>VOLUME SYNC</span><span>◆</span><span>THEME PACKS</span><span>◆</span><span>NO DEVELOPER OPTIONS</span><span>◆</span><span>SPOTIFY · YOUTUBE · TIKTOK</span><span>◆</span>
+      </div>
+    </div>
+
+    <!-- ─────────────── looks ─────────────── -->
+    <section class="block" id="looks">
+      <div class="head">
+        <p class="eyebrow">Looks</p>
+        <h2>A new outfit for every mood.</h2>
+        <p class="sub">Three looks come free and you can build your own. The roulette can swap them song by song, and it can even pick the look that fits the vibe.</p>
+      </div>
+
+      <div class="cards four">
+        <article class="card look" data-go="cyan" tabindex="0" role="button" aria-label="Show Cyan LCD in the phone above">
+          <img src="media/cyan.png" alt="The Cyan LCD look in the app: a glowing pixel screen with the song and an equaliser" loading="lazy">
+          <h3>Cyan LCD <small class="free">FREE</small></h3>
+          <p>A glowing pixel screen in the dark. Retro, calm, a little hacker.</p>
+        </article>
+        <article class="card look" data-go="red" tabindex="0" role="button" aria-label="Show Red Mixer in the phone above">
+          <img src="media/red.png" alt="The Red Mixer look in the app: red on black" loading="lazy">
+          <h3>Red Mixer <small class="free">FREE</small></h3>
+          <p>Hot red on black. Built for rock, energy and loud mornings.</p>
+        </article>
+        <article class="card look" data-go="hifi" tabindex="0" role="button" aria-label="Show Hi-Fi in the phone above">
+          <img src="media/hifi.png" alt="The Hi-Fi look in the app: brushed metal and a teal display" loading="lazy">
+          <h3>Hi-Fi <small class="free">FREE</small></h3>
+          <p>Brushed metal and a teal display, like the stereo you always wanted.</p>
+        </article>
+        <article class="card look locked" data-go="midas" tabindex="0" role="button" aria-label="About the locked MIDAS pack">
+          <img src="media/library-midas.png" alt="The MIDAS card as it appears in the app's theme library, with a padlock: Theme pack, tap to unlock" loading="lazy" class="wide">
+          <h3>MIDAS <small class="paid">PAID PACK</small></h3>
+          <p>A luxury look that unlocks with a code. See how it works below.</p>
+        </article>
+      </div>
+
+      <div class="duo">
+        <div class="panel" id="rouletteDemo">
+          <h3>🎲 Random roulette</h3>
+          <p>Every new song lands on a different free look. Spin it and the phone above wears the result.</p>
+          <div class="reel" aria-live="polite"><div class="reel-in" id="reelIn"></div></div>
+          <button class="cta small" id="spin" type="button">Spin</button>
+        </div>
+        <div class="panel" id="vibeDemo">
+          <h3>🎧 Match the vibe</h3>
+          <p>HyDeck reads the title, artist and genre tags to guess the mood, then picks a look that fits. It reads words, never audio. This box is a simplified version of how it thinks. Type a song or artist:</p>
+          <input id="vibeIn" type="text" placeholder="e.g. Enter Sandman Metallica" autocomplete="off" aria-label="Song or artist">
+          <div class="vibe-out" id="vibeOut" aria-live="polite"><span class="muted">Waiting for a song…</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── fits every phone ─────────────── -->
+    <section class="block alt" id="fit">
+      <div class="head">
+        <p class="eyebrow">Fits every phone</p>
+        <h2>Every phone is different. HyDeck knows.</h2>
+        <p class="sub">These are real screenshots from a real Android phone, set to each screen size in turn. The deck re-flows to fit: on a small screen, or with large text, the whole deck shrinks a little instead of cutting off the controls.</p>
+      </div>
+      <div class="shots">
+        <figure><div class="device small"><div class="glass"><img src="media/size-320.png" alt="HyDeck on a small 320 dp wide phone: the whole deck fits, including the wheel" loading="lazy"></div></div><figcaption><b>320 × 568</b> small phone</figcaption></figure>
+        <figure><div class="device small"><div class="glass"><img src="media/size-360.png" alt="HyDeck on a 360 dp wide phone, the most common size" loading="lazy"></div></div><figcaption><b>360 × 800</b> the most common size</figcaption></figure>
+        <figure><div class="device small"><div class="glass"><img src="media/size-412.png" alt="HyDeck on a big 412 dp wide phone" loading="lazy"></div></div><figcaption><b>412 × 915</b> big phone</figcaption></figure>
+        <figure><div class="device small"><div class="glass"><img src="media/size-360-bigtext.png" alt="HyDeck on a 360 dp phone with the system font size turned up to 130 percent" loading="lazy"></div></div><figcaption><b>360 × 800</b> with large text (130%)</figcaption></figure>
+      </div>
+      <p class="fine">Tested again on nine screen sizes, with large text, before every release.</p>
+    </section>
+
+    <!-- ─────────────── volume sync ─────────────── -->
+    <section class="block" id="sync">
+      <div class="sync">
+        <div class="sync-copy">
+          <p class="eyebrow">Volume sync</p>
+          <h2>Press the buttons on your phone. HyDeck follows.</h2>
+          <p class="sub">Raise or lower the volume with your phone's side buttons and the deck moves with it, to exactly the same level, in every look.</p>
+          <p class="fine">Watch the recording: the volume buttons are pressed down four times, then up four times, and the wheel and the percentage follow every step.</p>
+        </div>
+        <div class="device"><div class="glass"><video id="volVideo" src="media/volume.mp4" muted loop playsinline preload="none" aria-label="Recording of the app while the phone's volume buttons are pressed: the volume ring follows"></video></div></div>
+      </div>
+    </section>
+
+    <!-- ─────────────── MIDAS ─────────────── -->
+    <section class="block midas" id="midas">
+      <div class="head">
+        <p class="eyebrow gold">Theme pack · MIDAS</p>
+        <h2>A luxury look, unlocked with a code.</h2>
+        <p class="sub">MIDAS is an optional, paid theme pack. In the app it shows as locked until you enter an unlock code made just for your phone. HyDeck itself, and its three built-in looks, stay free.</p>
+      </div>
+      <div class="midas-grid">
+        <div class="device"><div class="glass">
+          <video id="midasVideo" src="media/midas.mp4" poster="media/midas.png" muted loop playsinline preload="none" aria-label="Recording of the MIDAS look: marble and gold, a watch dial, a net worth that grows while music plays"></video>
+          <span class="ribbon">🔒 PAID PACK · LOCKED UNTIL YOU ENTER A CODE</span>
+        </div></div>
+        <div class="midas-info">
+          <h3>What you get</h3>
+          <ul class="bullets">
+            <li><b>A net worth that grows as you listen.</b> It starts small (here, about a hundred thousand dollars on a first day) and climbs with the music.</li>
+            <li><b>A gold watch dial</b> that is the song's progress, and a gold volume bar.</li>
+            <li><b>Ranks from D up to SSS+</b>, seven assets to collect and twelve quests.</li>
+            <li><b>Real money is never involved.</b> It is a game on a music player.</li>
+          </ul>
+          <h3>How it unlocks</h3>
+          <div class="unlock">
+            <div class="step"><b>1</b><p>In HyDeck open <em>Library → MIDAS</em>. It shows a short <b>device code</b> for your phone.</p></div>
+            <div class="step"><b>2</b><p>Send that code with your payment. It has no personal information in it.</p></div>
+            <div class="step"><b>3</b><p>You get an <b>unlock code</b> made only for your phone. Paste it in and MIDAS opens.</p></div>
+          </div>
+          <p class="fine">Want a theme pack? Price and payment: <a href="https://github.com/abdulazizmerathemydin-del/hyper-tech-widget/issues/new" target="_blank" rel="noopener">message us here</a> and we will reply with how to pay and your unlock code.</p>
+        </div>
+        <figure class="pack-shot">
+          <img src="media/pack-sheet.png" alt="The app's Theme packs screen: MIDAS is locked, with the phone's device code and a box to paste the unlock code" loading="lazy">
+          <figcaption>The real unlock screen. (The device code shown is a sample.)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ─────────────── safe ─────────────── -->
+    <section class="block" id="safe">
+      <div class="head">
+        <p class="eyebrow">Safe by design</p>
+        <h2>No Developer Options. No funny business.</h2>
+        <p class="sub">You never have to turn on Developer Options or USB debugging. HyDeck asks for three normal things, and here is exactly why.</p>
+      </div>
+      <div class="cards three">
+        <article class="card"><div class="icon" aria-hidden="true">🔔</div><h3>Notification access</h3><p>This is how HyDeck reads <em>what is playing</em> (title, artist, the buttons), the same way a lock-screen player does. It does not read your messages.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">🌐</div><h3>Internet</h3><p>For links you share to HyDeck, the in-app players, and checking for updates. Nothing else leaves your phone unless you turn on an optional online feature.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">⬇️</div><h3>Install its own updates</h3><p>HyDeck can open Android's installer for a new version, and Android always asks you to confirm. It checks the file's fingerprint first.</p></article>
+      </div>
+      <div class="promise">
+        <div><b>On your phone</b><span>Your themes, settings and unlocks are stored on the device.</span></div>
+        <div><b>No trackers</b><span>No ads, no analytics, no account needed to use it.</span></div>
+        <div><b>You are in control</b><span>Turn off Notification access any time in Android settings.</span></div>
+      </div>
+    </section>
+
+    <!-- ─────────────── updates ─────────────── -->
+    <section class="block alt" id="updates">
+      <div class="head">
+        <p class="eyebrow">Updates</p>
+        <h2>One tap to the newest version.</h2>
+      </div>
+      <ol class="flow">
+        <li><span>1</span><b>Check</b><p>HyDeck looks at this website for a newer version.</p></li>
+        <li><span>2</span><b>Download</b><p>The new version downloads inside the app, with a progress bar.</p></li>
+        <li><span>3</span><b>Verify</b><p>Its fingerprint must match the one published here, or it is thrown away.</p></li>
+        <li><span>4</span><b>Install</b><p>Android asks you to confirm. Your themes and settings stay.</p></li>
+      </ol>
+    </section>
+
+    <!-- ─────────────── download ─────────────── -->
+    <section class="block" id="download">
+      <div class="head">
+        <p class="eyebrow">Download</p>
+        <h2>Get HyDeck.</h2>
+        <p class="sub">HyDeck is an <b>Android</b> app (Android 7 or newer). It does not run on a PC, and there is no iPhone version yet. On a computer? Send this page to your phone with the code or link below.</p>
+      </div>
+      <div class="dl">
+        <div class="dl-card">
+          <div class="dl-top">
+            <div class="app-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="var(--bg)"/><circle cx="32" cy="32" r="18" fill="none" stroke="var(--accent)" stroke-width="5"/><path d="M26 22l16 10-16 10z" fill="var(--accent)"/></svg></div>
+            <div>
+              <h3>HyDeck <span class="ver" id="dlVer"></span></h3>
+              <p class="muted" id="dlMeta">Checking the latest version…</p>
+            </div>
+          </div>
+          <a class="cta big disabled" id="dlBtn" href="#download" aria-disabled="true">Download APK</a>
+          <div class="sha">
+            <small>SHA-256 fingerprint</small>
+            <code id="dlSha">—</code>
+            <button type="button" id="copySha" class="ghost small" disabled>Copy</button>
+          </div>
+          <p class="notes" id="dlNotes"></p>
+        </div>
+
+        <div class="pc-box" id="pcBox">
+          <h3>On a computer? Send it to your phone</h3>
+          <div class="qr-row">
+            <div class="qr" id="qr" role="img" aria-label="QR code for this page"></div>
+            <div class="qr-text">
+              <p>Scan this with your <b>Android phone's camera</b> to open this page on it.</p>
+              <div class="qr-actions">
+                <button type="button" id="copyLink" class="ghost small">Copy the link</button>
+                <a id="mailLink" class="ghost small" href="#">Email me the link</a>
+              </div>
+            </div>
+          </div>
+          <ol class="install">
+            <li><b>Download</b> the file on your phone.</li>
+            <li>Open it. If Android asks, allow your browser to <b>install unknown apps</b> (a normal Android setting, not Developer Options).</li>
+            <li>Tap <b>Install</b>, then <b>Open</b>.</li>
+            <li>When HyDeck asks for <b>Notification access</b>, switch it on so it can read what is playing.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── faq ─────────────── -->
+    <section class="block alt" id="faq">
+      <div class="head"><p class="eyebrow">Questions</p><h2>Good to know.</h2></div>
+      <div class="faq">
+        <details><summary>Is what I see here the real app?</summary><p>Yes. Every look on this page is a real screenshot or recording of the app running on a real Android phone. The only made-up things are the demo song and its artwork, so no real music is shown. The one extra is the "match the vibe" box, a simplified version of the idea.</p></details>
+        <details><summary>Is it really free?</summary><p>Yes. HyDeck and its three built-in looks are free. Extra theme packs, like MIDAS, are optional and paid, and they are locked until you enter an unlock code.</p></details>
+        <details><summary>Which music apps work?</summary><p>Anything that shows a now-playing card on your phone: Spotify, YouTube Music, YouTube, TikTok and more. You can also share a YouTube or TikTok link to HyDeck to watch it in the in-app player.</p></details>
+        <details><summary>Can it hear my music to pick a look?</summary><p>No, it can't hear audio. "Match the vibe" reads the song title, artist and genre tags, and guesses the mood from the words.</p></details>
+        <details><summary>How do theme packs work without the internet?</summary><p>Each pack unlocks with a code made only for your phone. It is checked on the phone itself, so it works offline.</p></details>
+        <details><summary>I reinstalled and my pack is locked.</summary><p>A reinstall makes a new device code. Send us the new one and we will make you a new unlock code.</p></details>
+        <details><summary>Can I use it on a computer or an iPhone?</summary><p>Not yet. HyDeck is for Android phones. This website works on any computer, phone or tablet so everyone can see what it is.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="brand"><svg viewBox="0 0 64 64" width="26" height="26" aria-hidden="true"><rect width="64" height="64" rx="14" fill="var(--accent)"/><circle cx="32" cy="32" r="17" fill="none" stroke="var(--bg)" stroke-width="5"/><path d="M26 22l16 10-16 10z" fill="var(--bg)"/></svg><span><b>Hyper Tech</b> Widget</span></div>
+    <p>HyDeck is made by Hyper Tech Widget, in Malaysia. Spotify, YouTube and TikTok are trademarks of their owners and are not affiliated with HyDeck.</p>
+    <p class="muted">© <span id="year">2026</span> Hyper Tech Widget</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

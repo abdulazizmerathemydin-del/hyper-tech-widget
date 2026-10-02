@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "build": 1,
+  "apk": "https://github.com/abdulazizmerathemydin-del/hyper-tech-widget/releases/download/v1.0.0/HyDeck-1.0.0.apk",
+  "sha256": "966a6ff87fcb7366c82405e773b2b7b31308fa469f1f426355f0e1f5f1739826",
+  "size": 56451180,
+  "notes": "First release"
+}
